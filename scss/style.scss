@@ -1,0 +1,26 @@
+// import reset
+@import "base/resert";
+
+// import variables
+@import "utilidades/variables";
+
+// estilos del header 
+@import "base/header";
+
+// estilos main
+@import "base/home";
+
+//estilos pege sobre mendoza
+@import "base/sobre-mendoza";
+
+// estilos page turismo
+@import "base/turismo";
+
+// estilos page hospedage
+@import "base/hospedajes";
+
+// estilos page contacto
+@import "base/contacto";
+
+// estilos del footer
+@import "base/footer";

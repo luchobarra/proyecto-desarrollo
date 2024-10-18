@@ -1,0 +1,603 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+header .navbar {
+  background-color: rgb(167, 146, 119);
+  border-bottom: 4px solid rgb(234, 216, 192);
+}
+header .navbar.header-inicio {
+  background-color: rgb(167, 146, 119);
+}
+header .navbar .navbar-brand {
+  margin-left: 0.1rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  font-size: clamp(30px, 5vw, 35px);
+  color: rgb(255, 242, 225);
+  letter-spacing: 2px;
+  text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+}
+header .navbar .navbar-brand:hover {
+  transform: scale(1.1);
+  color: rgb(255, 242, 225);
+}
+header .navbar .collapse .navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin-right: 0.1rem;
+}
+header .navbar .collapse .navbar-nav .nav-item .nav-link {
+  color: rgb(255, 242, 225);
+  text-decoration: none;
+  transition: black 0.3s ease, background-color 0.3s ease;
+  font-size: clamp(16px, 4vw, 24px);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+header .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+  font-weight: 600;
+}
+header .navbar .collapse .navbar-nav .nav-item:hover {
+  transform: scale(1.1);
+}
+header .navbar .navbar-toggler {
+  background-color: rgb(234, 216, 192);
+  border: 3px solid rgb(255, 242, 225);
+}
+header .navbar .navbar-toggler:focus, header .navbar .navbar-toggler:hover, header .navbar .navbar-toggler:active {
+  background-color: inherit;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Media queries para desactivar hover en pantallas pequeñas */
+@media (max-width: 1024px) {
+  header .navbar .navbar-brand:hover,
+  header .navbar .collapse .navbar-nav .nav-item:hover,
+  header .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+    transform: inherit;
+    pointer-events: none;
+    font-weight: inherit;
+  }
+}
+/* estilos del home */
+.body-home {
+  background-color: rgb(255, 242, 225);
+}
+.body-home .main-home {
+  padding: 3rem;
+  background-color: transparent;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.body-home .main-home h1 {
+  display: inline-block;
+  color: rgb(255, 242, 225);
+  margin-bottom: 7rem;
+  font-size: 6rem;
+  letter-spacing: 0.9rem;
+  font-family: "Lobster", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  text-shadow: 10px 10px 4px rgba(54, 54, 54, 0.5);
+}
+.body-home .main-home .botton-home {
+  display: flex;
+  justify-content: center;
+}
+.body-home .main-home .botton-home a {
+  color: rgb(255, 242, 225);
+  text-decoration: none;
+  background-color: rgb(167, 146, 119);
+  padding: 1rem 2rem;
+  border-radius: 5%;
+  box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  font-size: 1.7rem;
+  border: 1.5px solid rgb(255, 242, 225);
+  font-style: bold;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  bottom: 2.5rem;
+}
+.body-home .main-home .botton-home a:hover {
+  transform: scale(1.1);
+}
+
+/* estilos page sobre-mendoza */
+body .main-sobre-mendoza {
+  background-color: rgb(255, 242, 225);
+  padding: 3.5rem;
+}
+body .main-sobre-mendoza .h1-sobre-mendoza {
+  color: rgb(45, 47, 51);
+  font-weight: 900;
+  font-style: bold;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+body .main-sobre-mendoza h3 {
+  text-align: center;
+  padding-top: 3rem;
+  color: rgb(45, 47, 51);
+  font-weight: 700;
+}
+body .main-sobre-mendoza div ul li {
+  list-style: none;
+}
+body .main-sobre-mendoza div ul li .p-introduccion {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: rgb(45, 47, 51);
+  margin-bottom: 3rem;
+}
+body .main-sobre-mendoza div ul li h2 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 35px 0 20px 0;
+  color: rgb(167, 146, 119);
+  font-style: bold;
+  font-weight: 700;
+}
+body .main-sobre-mendoza div ul li p {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: left;
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
+  color: rgb(45, 47, 51);
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  body .main-sobre-mendoza {
+    padding: 1.5rem;
+  }
+}
+/* Estilos cards page turismo */
+body .main-turismo {
+  background-color: rgb(255, 242, 225);
+}
+body .main-turismo h1 {
+  text-align: center;
+  padding: 2rem;
+  font-style: bold;
+  font-weight: 800;
+  font-size: 3rem;
+  color: rgb(45, 47, 51);
+}
+body .main-turismo h3 {
+  text-align: center;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgb(45, 47, 51);
+  margin-bottom: 2rem;
+}
+body .main-turismo .card-container-turismo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-top: 2px solid rgb(167, 146, 119);
+}
+body .main-turismo .card-container-turismo .card-turismo {
+  background-color: rgb(234, 216, 192);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+  border: 3px solid rgb(167, 146, 119);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body .main-turismo .card-container-turismo .card-turismo:hover {
+  transform: translateY(-10px);
+}
+body .main-turismo .card-container-turismo .card-turismo img {
+  width: 100%;
+  height: 40%;
+  border-bottom: 2px solid rgb(167, 146, 119);
+  object-fit: cover;
+}
+body .main-turismo .card-container-turismo .card-turismo h3 {
+  font-size: 1.9rem;
+  font-style: bold;
+  font-weight: 700;
+  color: rgb(167, 146, 119);
+  margin: 15px 0;
+}
+body .main-turismo .card-container-turismo .card-turismo p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: rgb(45, 47, 51);
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo {
+  background-color: rgb(167, 146, 119);
+  display: inline-block;
+  padding: 12px 24px; /* Espacio interno del botón */
+  font-size: clamp(16px, 2vw, 18px); /* Tamaño adaptable de texto */
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo:hover {
+  background-color: rgb(69, 59, 45);
+  transform: translateY(-3px); /* Efecto de levitación */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  text-decoration: none;
+}
+body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo:active {
+  transform: translateY(1px); /* Presionar efecto */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5); /* Resalta el botón en enfoque */
+}
+
+@media (max-width: 1024px) {
+  body .main-turismo .card-container-turismo {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 500px));
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 3rem;
+  }
+  body .main-turismo .card-container-turismo .card-turismo {
+    max-height: 675px;
+  }
+  body .main-turismo .card-container-turismo .card-turismo h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+  body .main-turismo .card-container-turismo .card-turismo p {
+    font-size: 1.5rem;
+  }
+  body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo {
+    padding: 12px 24px; /* Ajusta el padding en pantallas pequeñas */
+    font-size: clamp(20px, 8vw, 22px); /* Texto adaptativo para móviles */
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  body .main-turismo .card-container-turismo {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 450px));
+    gap: 0.5rem;
+  }
+  body .main-turismo .card-container-turismo .card-turismo {
+    padding-bottom: 2rem;
+    max-height: 650px;
+  }
+  body .main-turismo .card-container-turismo .card-turismo h3 {
+    font-size: 2.1rem;
+  }
+  body .main-turismo .card-container-turismo .card-turismo p {
+    font-size: 1.4rem;
+  }
+  body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo {
+    font-size: clamp(20px, 8vw, 22px);
+  }
+}
+/* Estilos cards page hospedajes */
+body .main-hospedajes {
+  background-color: rgb(255, 242, 225);
+  flex: 1;
+  padding-bottom: 10px;
+}
+body .main-hospedajes .h1-hospedajes {
+  color: rgb(45, 47, 51);
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  font-weight: 900;
+  font-style: bold;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+}
+body .main-hospedajes .p-hospedajes {
+  color: rgb(45, 47, 51);
+  text-align: center;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 1.2rem;
+}
+body .main-hospedajes .card-container-hospedaje {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 2.5rem;
+  column-gap: 0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  justify-items: center;
+  border-top: 2px solid rgb(167, 146, 119);
+  border-bottom: 2px solid rgb(167, 146, 119);
+  margin-bottom: 2rem;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  background-color: rgb(234, 216, 192);
+  border: 3px solid rgb(167, 146, 119);
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid rgb(167, 146, 119);
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje h3 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: rgb(45, 47, 51);
+  margin: 15px 0;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: rgb(45, 47, 51);
+  padding: 0 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  hyphens: auto;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .price {
+  color: rgb(45, 47, 51);
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .reserve-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(167, 146, 119);
+  color: #fff;
+  border: 1px solid rgb(45, 47, 51);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .reserve-btn:hover {
+  background-color: rgb(69, 59, 45);
+}
+
+@media (max-width: 768px) {
+  body .main-hospedajes .card-container-hospedaje {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  body .main-hospedajes .card-container-hospedaje .card-hospedaje {
+    margin-bottom: 20px;
+  }
+  body .main-hospedajes .card-container-hospedaje .card-hospedaje h3 {
+    font-size: 1.5rem;
+  }
+  body .main-hospedajes .card-container-hospedaje .card-hospedaje p {
+    font-size: 0.9rem;
+  }
+}
+.main-contacto {
+  display: flex;
+  flex-direction: row; /* Elementos en fila (row) */
+  justify-content: space-between; /* Espacio entre texto y formulario */
+  align-items: center; /* Centra verticalmente los elementos */
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  padding: 4rem;
+  background-color: rgb(255, 242, 225);
+  flex: 1;
+  gap: 2rem; /* Añadido espacio entre elementos */
+  box-sizing: border-box;
+}
+
+/* Sección de texto */
+.text-section {
+  max-width: 40%; /* El texto ocupa la mitad de la pantalla */
+  flex-grow: 1;
+}
+.text-section h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+.text-section p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Estilos del formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Dirección en columna */
+  gap: 15px; /* Espacio entre los campos del formulario */
+  width: 100%;
+  max-width: 500px; /* Anchura máxima del formulario */
+  background-color: rgb(234, 216, 192);
+  padding: 2.5rem;
+  border: 2px solid rgb(167, 146, 119);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.595);
+  flex-grow: 1;
+}
+.contact-form label {
+  font-size: 1em;
+  color: #333;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid rgb(167, 146, 119);
+  border-radius: 5px;
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  box-sizing: border-box;
+}
+.contact-form button {
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: rgb(167, 146, 119);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+.contact-form button:hover {
+  background-color: rgb(209, 187, 158);
+}
+
+/* responsive para tablets 1024px */
+@media (max-width: 1024px) {
+  .main-contacto {
+    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en columna */
+    align-items: center; /* Centra los elementos en columna */
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .text-section {
+    max-width: 100%;
+    text-align: center; /* Texto centrado en pantallas pequeñas */
+  }
+  .contact-form {
+    max-width: 100%;
+    padding: 2rem;
+  }
+}
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .main-contacto {
+    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en columna */
+    align-items: center; /* Centra los elementos en columna */
+    padding: 1rem;
+    min-height: auto;
+    gap: 1.5rem;
+  }
+  .text-section {
+    max-width: 100%;
+    text-align: center; /* Texto centrado en pantallas pequeñas */
+    order: 1;
+  }
+  .contact-form {
+    max-width: 100%;
+    padding: 1rem;
+    order: 2;
+  }
+}
+/*estilos del footer*/
+footer {
+  background-color: rgb(167, 146, 119);
+  padding: 3rem 2rem;
+  color: rgb(255, 242, 225);
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+footer .footer-container .footer-section {
+  flex: 1 1 20%;
+  min-width: 250px;
+}
+footer .footer-container .footer-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(234, 216, 192);
+}
+footer .footer-container .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footer-container .footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+footer .footer-container .footer-section ul li a {
+  color: rgb(255, 242, 225);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+footer .footer-container .footer-section ul li a:hover {
+  color: rgb(234, 216, 192);
+}
+footer .footer-container .footer-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+footer .footer-container .footer-section .social-icons {
+  display: flex;
+  gap: 1rem;
+}
+footer .footer-container .footer-section .social-icons a {
+  font-size: 1.5rem;
+  color: rgb(255, 242, 225);
+  transition: color 0.3s ease;
+}
+footer .footer-container .footer-section .social-icons a:hover {
+  color: rgb(234, 216, 192);
+}
+footer .footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(234, 216, 192);
+}
+
+/* Media queries para pantallas móviles */
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .footer-container .footer-section {
+    margin-bottom: 2rem;
+  }
+  footer .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,87 @@
+// import variables
+@import "../utilidades/variables";
+
+// estilos del header
+
+header {
+    .navbar {
+        background-color: nth($list-color,1);
+        border-bottom: 4px solid nth($list-color,3);
+
+        &.header-inicio {
+        background-color: nth($list-color,1);
+        }
+
+        .navbar-brand {
+            margin-left: 0.1rem;
+            font-family: "Lobster", sans-serif;
+            font-weight: 900;
+            font-style: bold;
+            font-size: clamp(30px, 5vw, 35px);
+            color: nth($list-color,2);
+            letter-spacing: 2px;
+            text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                transform: scale(1.1);
+                color: nth($list-color,2);
+            }
+        }
+
+        .collapse {
+            .navbar-nav {
+                list-style: none;
+                display: flex;
+                gap: 2.2rem;
+                margin-right: 0.1rem;
+
+                .nav-item {
+                    .nav-link {
+                        color: nth($list-color,2);
+                        text-decoration: none;
+                        transition: black 0.3s ease, background-color 0.3s ease;
+                        font-size: clamp(16px, 4vw, 24px);
+                        font-weight: 600;
+                        letter-spacing: 0.1rem;
+
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .navbar-toggler {
+            background-color: nth($list-color,3);
+            border: 3px solid nth($list-color,2);
+
+            &:focus,
+            &:hover,
+            &:active {
+                background-color: inherit;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+}
+
+/* Media queries para desactivar hover en pantallas pequeñas */
+@media (max-width: 1024px) {
+    header {
+        .navbar {
+        .navbar-brand:hover,
+        .collapse .navbar-nav .nav-item:hover,
+        .collapse .navbar-nav .nav-item .nav-link:hover {
+            transform: inherit;
+            pointer-events: none;
+            font-weight: inherit;
+            }
+        }
+    }
+}

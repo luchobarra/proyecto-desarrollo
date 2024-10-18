@@ -1,0 +1,61 @@
+/* estilos del home */
+
+.body-home {
+  background-color: nth($list-color,2);
+  // background-image: url('/img/img.home.avif');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // min-height: 100vh;
+
+    
+  .main-home {
+    padding: 3rem;
+    background-color: transparent;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    
+    h1 {
+      display: inline-block;
+      color: rgb(255, 242, 225);
+      margin-bottom: 7rem;
+      font-size: clamp(4rem, 6rem, 10rem);
+      letter-spacing: 0.9rem;
+      font-family: "Lobster", sans-serif;
+      font-weight: 900;
+      font-style: bold;
+      text-shadow: 10px 10px 4px rgba(54, 54, 54, 0.5);
+    }
+    
+    .botton-home {
+      display: flex;
+      justify-content: center;
+    
+      a {
+        color: rgb(255, 242, 225);
+        text-decoration: none;
+        background-color: rgb(167, 146, 119);
+        padding: 1rem 2rem;
+        border-radius: 5%;
+        box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+        font-size: 1.7rem;
+        border: 1.5px solid rgb(255, 242, 225);
+        font-style: bold;
+        letter-spacing: 0.2rem;
+        position: absolute;
+        bottom: 2.5rem;
+      
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

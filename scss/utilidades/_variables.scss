@@ -1,0 +1,26 @@
+// lista paleta de colores
+// 1- marron oscuro (principal, header, footer, call to action, bordes cards, h2 page sobre-mendoza), 2- marron claro (fondo de main, letras header y footer), 3- bacground cards (un poco mas oscuro que el 2), 4- marron oscuro oscuro (para hover).
+
+$list-color: rgb(167, 146, 119), rgb(255, 242, 225), rgb(234, 216, 192), rgb(69, 59, 45);
+
+//color negro pastel para textos
+$black-text: rgb(45, 47, 51);
+
+
+// imagen fondo home
+
+
+
+// mixin estilos y tipografia para nombre de la pagina 
+
+@mixin nombre-pagina{
+    margin-left: 0.1rem;   
+    font-family: "Lobster", sans-serif;
+    font-weight: 900;
+    font-style: bold;
+    font-size: clamp(30px, 5vw, 35px); 
+    color: rgb(255, 242, 225);
+    letter-spacing: 2px;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5)
+}
+

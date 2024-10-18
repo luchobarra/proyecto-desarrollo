@@ -1,0 +1,117 @@
+.main-contacto {
+    display: flex;
+    flex-direction: row; /* Elementos en fila (row) */
+    justify-content: space-between; /* Espacio entre texto y formulario */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    padding: 4rem;
+    background-color: rgb(255, 242, 225);
+    flex: 1;
+    gap: 2rem; /* Añadido espacio entre elementos */
+    box-sizing: border-box;
+  }
+  
+  /* Sección de texto */
+  .text-section {
+    max-width: 40%; /* El texto ocupa la mitad de la pantalla */
+    flex-grow: 1;
+
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+  
+    p {
+      font-size: 1.2em;
+      color: #666;
+    }
+  }
+  
+  /* Estilos del formulario */
+  .contact-form {
+    display: flex;
+    flex-direction: column; /* Dirección en columna */
+    gap: 15px; /* Espacio entre los campos del formulario */
+    width: 100%;
+    max-width: 500px; /* Anchura máxima del formulario */
+    background-color: rgb(234, 216, 192);
+    padding: 2.5rem;
+    border: 2px solid rgb(167, 146, 119);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.595);
+    flex-grow: 1;
+  
+    label {
+      font-size: 1em;
+      color: #333;
+    }
+  
+    input,
+    textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid rgb(167, 146, 119);
+      border-radius: 5px;
+      width: 100%; /* Ocupa todo el ancho del formulario */
+      box-sizing: border-box;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 1.2em;
+      background-color: rgb(167, 146, 119);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+  
+      &:hover {
+        background-color: rgb(209, 187, 158);
+      }
+    }
+  }
+  
+  /* responsive para tablets 1024px */
+  @media (max-width: 1024px) {
+    .main-contacto {
+      flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en columna */
+      align-items: center; /* Centra los elementos en columna */
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .text-section {
+      max-width: 100%;
+      text-align: center; /* Texto centrado en pantallas pequeñas */
+    }
+  
+    .contact-form {
+      max-width: 100%;
+      padding: 2rem;
+    }
+  }
+  
+  /* Responsivo para mobile */
+  @media (max-width: 768px) {
+    .main-contacto {
+      flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en columna */
+      align-items: center; /* Centra los elementos en columna */
+      padding: 1rem;
+      min-height: auto;
+      gap: 1.5rem;
+    }
+  
+    .text-section {
+      max-width: 100%;
+      text-align: center; /* Texto centrado en pantallas pequeñas */
+      order: 1;
+    }
+  
+    .contact-form {
+      max-width: 100%;
+      padding: 1rem;
+      order: 2;
+    }
+}

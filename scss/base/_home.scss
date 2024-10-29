@@ -1,61 +1,84 @@
+// import variables
+@import "../utilidades/variables";
+
 /* estilos del home */
 
 .body-home {
-  background-color: nth($list-color,2);
+  background-color: nth($list-color,3);
   // background-image: url('/img/img.home.avif');
   // background-size: cover;
   // background-position: center;
   // background-repeat: no-repeat;
   // background-attachment: fixed;
   // min-height: 100vh;
+  // este es el codigo que tenia en css, pero no me toma la imagen de fondo en sass. Por favor me darian una mano para ver si lo puedo hacer funcionar. Gracias
 
     
   .main-home {
     padding: 3rem;
     background-color: transparent;
-    height: 89vh;
+    min-height: calc(100vh - 60px); // Ajusta según la altura del header si es fija
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     text-align: center;
+    position: relative;
     
     h1 {
-      display: inline-block;
-      color: rgb(255, 242, 225);
-      margin-bottom: 7rem;
-      font-size: clamp(4rem, 6rem, 10rem);
+      color: nth($list-color, 2);
+      font-size: clamp(6rem, 8vw, 12rem);
       letter-spacing: 0.9rem;
       font-family: "Lobster", sans-serif;
       font-weight: 900;
       font-style: bold;
       text-shadow: 10px 10px 4px rgba(54, 54, 54, 0.5);
+      margin: auto 0; // Centra el h1 en el eje vertical
     }
-    
+  
     .botton-home {
+      position: absolute;
+      bottom: 2rem; // Ubica el botón al pie del main
       display: flex;
       justify-content: center;
-    
-      a {
-        color: rgb(255, 242, 225);
-        text-decoration: none;
-        background-color: rgb(167, 146, 119);
-        padding: 1rem 2rem;
-        border-radius: 5%;
-        box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.5);
-        font-weight: 600;
-        font-size: 1.7rem;
-        border: 1.5px solid rgb(255, 242, 225);
-        font-style: bold;
-        letter-spacing: 0.2rem;
-        position: absolute;
-        bottom: 2.5rem;
+      width: 100%;
       
-        &:hover {
-          transform: scale(1.1);
-        }
+      a {
+        background-color: nth($list-color, 1);
+        padding: 18px 50px;
+        font-size: clamp(18px, 4vw, 20px);
+        font-weight: 600;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
     }
+  }
+} 
+  
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-home {
+    padding: 1rem;
+    min-height: calc(100vh - 60px);
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: auto 0;
+  }
+  
+  .botton-home {
+    bottom: 1rem;
+  }
+  
+  .botton-home a {
+    padding: 10px 20px;
+    font-size: clamp(16px, 4vw, 18px);
+    width: auto;
   }
 }

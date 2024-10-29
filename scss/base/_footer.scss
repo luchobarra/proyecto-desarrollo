@@ -48,11 +48,13 @@ footer {
 
             .social-icons {
                 display: flex;
-                gap: 1rem;
+                flex-direction: column;
+                
 
-                a {
-                    font-size: 1.5rem;
+                p {
                     color: rgb(255, 242, 225);
+                    text-decoration: none;
+                    font-size: 1rem;
                     transition: color 0.3s ease;
 
                     &:hover {

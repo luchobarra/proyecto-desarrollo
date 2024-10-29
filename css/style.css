@@ -38,8 +38,8 @@ header .navbar .collapse .navbar-nav .nav-item .nav-link {
   color: rgb(255, 242, 225);
   text-decoration: none;
   transition: black 0.3s ease, background-color 0.3s ease;
-  font-size: clamp(16px, 4vw, 24px);
-  font-weight: 600;
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: 500;
   letter-spacing: 0.1rem;
 }
 header .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
@@ -70,100 +70,119 @@ header .navbar .navbar-toggler:focus, header .navbar .navbar-toggler:hover, head
 }
 /* estilos del home */
 .body-home {
-  background-color: rgb(255, 242, 225);
+  background-color: rgb(234, 216, 192);
 }
 .body-home .main-home {
   padding: 3rem;
   background-color: transparent;
-  height: 89vh;
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 .body-home .main-home h1 {
-  display: inline-block;
   color: rgb(255, 242, 225);
-  margin-bottom: 7rem;
-  font-size: 6rem;
+  font-size: clamp(6rem, 8vw, 12rem);
   letter-spacing: 0.9rem;
   font-family: "Lobster", sans-serif;
   font-weight: 900;
   font-style: bold;
   text-shadow: 10px 10px 4px rgba(54, 54, 54, 0.5);
+  margin: auto 0;
 }
 .body-home .main-home .botton-home {
+  position: absolute;
+  bottom: 2rem;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .body-home .main-home .botton-home a {
-  color: rgb(255, 242, 225);
-  text-decoration: none;
   background-color: rgb(167, 146, 119);
-  padding: 1rem 2rem;
-  border-radius: 5%;
-  box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.5);
+  padding: 18px 50px;
+  font-size: clamp(18px, 4vw, 20px);
   font-weight: 600;
-  font-size: 1.7rem;
-  border: 1.5px solid rgb(255, 242, 225);
-  font-style: bold;
-  letter-spacing: 0.2rem;
-  position: absolute;
-  bottom: 2.5rem;
-}
-.body-home .main-home .botton-home a:hover {
-  transform: scale(1.1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-home {
+    padding: 1rem;
+    min-height: calc(100vh - 60px);
+  }
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: auto 0;
+  }
+  .botton-home {
+    bottom: 1rem;
+  }
+  .botton-home a {
+    padding: 10px 20px;
+    font-size: clamp(16px, 4vw, 18px);
+    width: auto;
+  }
+}
 /* estilos page sobre-mendoza */
 body .main-sobre-mendoza {
   background-color: rgb(255, 242, 225);
-  padding: 3.5rem;
+  padding: 0 3.5rem 2rem 3.5rem;
 }
 body .main-sobre-mendoza .h1-sobre-mendoza {
-  color: rgb(45, 47, 51);
-  font-weight: 900;
-  font-style: bold;
-  font-size: 2.7rem;
-  letter-spacing: 2px;
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 2rem;
+  font-style: bold;
+  font-weight: 800;
+  font-size: 3rem;
+  color: rgb(37, 38, 41);
 }
 body .main-sobre-mendoza h3 {
   text-align: center;
   padding-top: 3rem;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   font-weight: 700;
+}
+body .main-sobre-mendoza div {
+  margin-top: 2rem;
 }
 body .main-sobre-mendoza div ul li {
   list-style: none;
 }
 body .main-sobre-mendoza div ul li .p-introduccion {
   font-weight: 600;
-  font-size: 1.6rem;
-  color: rgb(45, 47, 51);
+  font-size: 1.4rem;
+  color: rgb(37, 38, 41);
   margin-bottom: 3rem;
 }
 body .main-sobre-mendoza div ul li h2 {
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 6px;
   letter-spacing: 1px;
   text-align: left;
   margin: 35px 0 20px 0;
   color: rgb(167, 146, 119);
   font-style: bold;
   font-weight: 700;
+  font-size: 1.6rem;
 }
 body .main-sobre-mendoza div ul li p {
   font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.7;
   text-align: left;
   letter-spacing: 0.4px;
   margin-bottom: 10px;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   hyphens: auto;
 }
 
@@ -182,14 +201,14 @@ body .main-turismo h1 {
   font-style: bold;
   font-weight: 800;
   font-size: 3rem;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
 }
 body .main-turismo h3 {
   text-align: center;
   font-style: bold;
   font-weight: 600;
   font-size: 2rem;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   margin-bottom: 2rem;
 }
 body .main-turismo .card-container-turismo {
@@ -231,7 +250,7 @@ body .main-turismo .card-container-turismo .card-turismo h3 {
 body .main-turismo .card-container-turismo .card-turismo p {
   font-weight: 500;
   font-size: 1.1rem;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   padding: 0 20px;
   margin-bottom: 30px;
 }
@@ -301,6 +320,7 @@ body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo:focus
   }
   body .main-turismo .card-container-turismo .card-turismo p {
     font-size: 1.4rem;
+    hyphens: auto;
   }
   body .main-turismo .card-container-turismo .card-turismo .card-btn-turismo {
     font-size: clamp(20px, 8vw, 22px);
@@ -313,20 +333,20 @@ body .main-hospedajes {
   padding-bottom: 10px;
 }
 body .main-hospedajes .h1-hospedajes {
-  color: rgb(45, 47, 51);
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  font-weight: 900;
+  padding: 2rem;
   font-style: bold;
-  font-size: 2.7rem;
-  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 3rem;
+  color: rgb(37, 38, 41);
 }
 body .main-hospedajes .p-hospedajes {
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   text-align: center;
   font-weight: 600;
   font-style: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  padding: 0 1rem 0 1rem;
 }
 body .main-hospedajes .card-container-hospedaje {
   display: grid;
@@ -363,7 +383,7 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje img {
 body .main-hospedajes .card-container-hospedaje .card-hospedaje h3 {
   font-size: 1.7rem;
   font-weight: 800;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   margin: 15px 0;
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -371,7 +391,7 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje h3 {
 body .main-hospedajes .card-container-hospedaje .card-hospedaje p {
   font-weight: 500;
   font-size: 1.1rem;
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   padding: 0 20px;
   margin-bottom: 30px;
   text-align: left;
@@ -383,7 +403,7 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve {
   align-items: center;
 }
 body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .price {
-  color: rgb(45, 47, 51);
+  color: rgb(37, 38, 41);
   font-weight: 800;
   font-size: 1.2rem;
   padding-left: 0;
@@ -393,7 +413,6 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .
   padding: 10px 20px;
   background-color: rgb(167, 146, 119);
   color: #fff;
-  border: 1px solid rgb(45, 47, 51);
   border-radius: 5px;
   text-decoration: none;
   font-size: 1rem;
@@ -421,36 +440,43 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .
 }
 .main-contacto {
   display: flex;
-  flex-direction: row; /* Elementos en fila (row) */
+  flex-direction: row;
   justify-content: space-between; /* Espacio entre texto y formulario */
-  align-items: center; /* Centra verticalmente los elementos */
-  height: 100vh; /* Ocupa toda la altura del viewport */
+  align-items: center;
+  height: 100vh;
   padding: 4rem;
   background-color: rgb(255, 242, 225);
   flex: 1;
-  gap: 2rem; /* Añadido espacio entre elementos */
+  gap: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-wrap: wrap;
+  /* Sección de texto */
+  /* Estilos del formulario */
+}
+.main-contacto .text-section {
+  max-width: 45%; /* El texto ocupa la mitad de la pantalla */
+  flex-grow: 1;
   box-sizing: border-box;
 }
-
-/* Sección de texto */
-.text-section {
-  max-width: 40%; /* El texto ocupa la mitad de la pantalla */
-  flex-grow: 1;
+.main-contacto .text-section h1 {
+  text-align: center;
+  padding: 2rem;
+  font-style: bold;
+  font-weight: 800;
+  font-size: 3rem;
+  color: rgb(37, 38, 41);
 }
-.text-section h1 {
-  font-size: 2.5em;
-  color: #333;
-}
-.text-section p {
+.main-contacto .text-section p {
+  text-align: center;
   font-size: 1.2em;
-  color: #666;
+  color: rgb(37, 38, 41);
+  padding: 0 1rem 0 1rem;
 }
-
-/* Estilos del formulario */
-.contact-form {
+.main-contacto .contact-form {
   display: flex;
   flex-direction: column; /* Dirección en columna */
-  gap: 15px; /* Espacio entre los campos del formulario */
+  gap: 15px;
   width: 100%;
   max-width: 500px; /* Anchura máxima del formulario */
   background-color: rgb(234, 216, 192);
@@ -458,13 +484,15 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .
   border: 2px solid rgb(167, 146, 119);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.595);
   flex-grow: 1;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.contact-form label {
+.main-contacto .contact-form label {
   font-size: 1em;
   color: #333;
 }
-.contact-form input,
-.contact-form textarea {
+.main-contacto .contact-form input,
+.main-contacto .contact-form textarea {
   padding: 10px;
   font-size: 1em;
   border: 1px solid rgb(167, 146, 119);
@@ -472,7 +500,7 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .
   width: 100%; /* Ocupa todo el ancho del formulario */
   box-sizing: border-box;
 }
-.contact-form button {
+.main-contacto .contact-form button {
   padding: 10px;
   font-size: 1.2em;
   background-color: rgb(167, 146, 119);
@@ -483,46 +511,50 @@ body .main-hospedajes .card-container-hospedaje .card-hospedaje .price-reserve .
   transition: background-color 0.3s ease;
   margin-top: 10px;
 }
-.contact-form button:hover {
-  background-color: rgb(209, 187, 158);
+.main-contacto .contact-form button:hover {
+  background-color: rgb(69, 59, 45);
 }
 
 /* responsive para tablets 1024px */
 @media (max-width: 1024px) {
   .main-contacto {
-    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en columna */
-    align-items: center; /* Centra los elementos en columna */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
   }
   .text-section {
-    max-width: 100%;
-    text-align: center; /* Texto centrado en pantallas pequeñas */
+    min-width: 700px;
+    text-align: center;
   }
   .contact-form {
     max-width: 100%;
     padding: 2rem;
   }
 }
-/* Responsivo para mobile */
+/* Responsive para mobile */
 @media (max-width: 768px) {
   .main-contacto {
-    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan en columna */
-    align-items: center; /* Centra los elementos en columna */
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
-    min-height: auto;
+    height: 150vh;
     gap: 1.5rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
   }
   .text-section {
-    max-width: 100%;
-    text-align: center; /* Texto centrado en pantallas pequeñas */
+    min-width: 500px;
+    text-align: center;
     order: 1;
+    margin-bottom: 1rem;
   }
   .contact-form {
     max-width: 100%;
     padding: 1rem;
     order: 2;
+    flex-grow: 0;
+    margin-bottom: 2rem;
   }
 }
 /*estilos del footer*/
@@ -568,14 +600,15 @@ footer .footer-container .footer-section p {
 }
 footer .footer-container .footer-section .social-icons {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
 }
-footer .footer-container .footer-section .social-icons a {
-  font-size: 1.5rem;
+footer .footer-container .footer-section .social-icons p {
   color: rgb(255, 242, 225);
+  text-decoration: none;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
-footer .footer-container .footer-section .social-icons a:hover {
+footer .footer-container .footer-section .social-icons p:hover {
   color: rgb(234, 216, 192);
 }
 footer .footer-bottom {

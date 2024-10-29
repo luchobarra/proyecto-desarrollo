@@ -3,12 +3,25 @@
 
 $list-color: rgb(167, 146, 119), rgb(255, 242, 225), rgb(234, 216, 192), rgb(69, 59, 45);
 
+
+
+
+
+// variables para textos
+
 //color negro pastel para textos
-$black-text: rgb(45, 47, 51);
+$black-text: rgb(37, 38, 41);
 
 
-// imagen fondo home
-
+// estilos para los h1
+@mixin h1-estilos-pages{
+    text-align: center;
+    padding: 2rem;
+    font-style: bold;
+    font-weight: 800;
+    font-size: 3rem;
+    color: $black-text; 
+}
 
 
 // mixin estilos y tipografia para nombre de la pagina 
@@ -23,4 +36,6 @@ $black-text: rgb(45, 47, 51);
     letter-spacing: 2px;
     text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5)
 }
+
+
 
